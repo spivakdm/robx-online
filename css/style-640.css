@@ -1,0 +1,867 @@
+/* jura-300 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/jura-v29-cyrillic_latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* jura-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/jura-v29-cyrillic_latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* jura-500 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/jura-v29-cyrillic_latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* jura-600 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/jura-v29-cyrillic_latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* jura-700 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/jura-v29-cyrillic_latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Jura";
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #231f20;
+}
+
+.title-1 {
+  font-family: "Jura";
+  font-size: 24px;
+  line-height: 108%;
+  letter-spacing: -0.5%;
+}
+
+.title-2 {
+  font-family: "Jura";
+  font-size: 22px;
+  font-weight: bolder;
+  line-height: normal;
+  letter-spacing: 0%;
+}
+
+.btn-mobile {
+  font-family: "Jura";
+  font-size: 16px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 5%;
+}
+
+.txt-mob {
+  font-family: "Jura";
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+
+/*card style */
+.card {
+  max-width: 1279px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 18px;
+  margin-bottom: 30px;
+}
+
+.wrapper-640{
+  width: 601px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.wrapper-640-without-png{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+/*.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}  */
+
+.wrapper-without-png {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.card-title {
+  max-width: 300px;
+  height: 67px;
+  font-size: 24px;
+  line-height: 108%;
+  letter-spacing: -0.5%;
+  margin-top: 1px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.png-main {
+  display: none;
+  margin-top: 103px;
+  height: 556px;
+  width: 546px;
+}
+
+.png-mobile {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  height: 162px;
+  width: 300px;
+}
+
+.png-main-640{
+  height: 138px;
+  width: 299px;
+}
+
+.form-main {
+  /*text-align: right;*/
+  width: 600px;
+  /*height: 372.3px;*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-legend {
+  display: none;
+  width: 300px;
+  height: 31px;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-legend-640 {
+  width: 300px;
+  height: 31px;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.form-legend-post {
+  display: none;
+  width: 300px;
+  height: 34px;
+  font-size: 14px;
+  line-height: auto;
+  letter-spacing: 5%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-legend-post-640{
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-size: 12px;
+  line-height: auto;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.form-main-data {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.form-main-field {
+  font-family: "Jura";
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  width: 600px;
+  height: 43px;
+  background-color: #f1f5f9;
+  padding-left: 20px;
+  border: 0;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 10px;
+}
+
+.form-main-data::placeholder {
+  font-family: "Jura";
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+
+.form-button {
+  font-family: "Jura";
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  line-height: 130%;
+  letter-spacing: 5%;
+  width: 600px;
+  height: 43px;
+  background-color: #ee5930;
+  /*padding: 20px;*/
+  border: 0;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 10px;
+}
+
+/*choice style */
+.choice {
+  max-width: 1279px;
+  /*height: 1304px;*/
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #ee5930;
+  margin-bottom: 0px;
+  padding-bottom: 30px;
+  border: none;
+  border-radius: 20px;
+}
+
+/*wrapper {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}*/
+
+.choice-title {
+  width: 429px;
+  /*height: 14px;*/
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: auto;
+  letter-spacing: 0%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+.choice-wrapper {
+  width: 604px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.choice-card {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 300px;
+  /*max-height: 351px;*/
+  margin-bottom: 4px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+}
+
+.png-choice {
+  display: none;
+  width: 384px;
+  height: 200px;
+  margin: 20px;
+}
+
+.png-choice-mobile {
+  width: 260px;
+  height: 100px;
+  margin: 20px;
+}
+
+.png-icon {
+  border: none;
+  /*-webkit-border-radius: 15px;
+  -moz-border-radius: 15px;*/
+  border-radius: 15px;
+}
+
+.svg-open {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+  width: 36px;
+  height: 36px;
+  border: 5px solid;
+  border-color: #ee5930;
+  border-radius: 36px;
+  /*background-image: url('');
+  background-size: cover;*/
+}
+
+/*.show-choice-card{
+  display: block;
+}*/
+
+.hide-choice-card {
+  display: none;
+}
+
+/*.courses-link {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  margin-bottom: 0px;
+} */
+
+.choice-subtitle {
+  max-width: 230px;
+  /*height: 38px;*/
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 5%;
+  line-height: auto;
+  text-align: left;
+}
+
+/*.choice-text {
+  display: none;
+}*/
+
+.choice-text {
+  width: 260px;
+  max-height: 147px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  letter-spacing: 0%;
+  line-height: 130%;
+  text-align: left;
+}
+
+.js-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+/*courses style*/
+.courses {
+  max-width: 639px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+}
+
+/*.choice {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #ee5930;
+  margin-bottom: 60px;
+  padding-bottom: 30px;
+  border: none;
+  border-radius: 20px;
+}*/
+
+.courses-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 300px;
+  /*height: 350px;*/
+  margin-bottom: 4px;
+  background-color: #f1f5f9;
+  border: none;
+  border-radius: 20px;
+}
+
+/*.choice-card {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 300px;
+  margin-bottom: 4px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+}*/
+
+.png-choice-mobile-200 {
+  width: 260px;
+  height: 200px;
+  margin: 20px;
+}
+
+.courses-text {
+  width: 259px;
+  max-height: 147px;
+  margin-left: 20px;
+  margin-right: 20px;
+  /*margin-bottom: 20px;*/
+  font-size: 16px;
+  letter-spacing: 130%;
+  line-height: auto;
+  text-align: left;
+}
+
+.hide-courses-text{
+  display: none;
+}
+
+.number-of-lessons {
+  display: none;
+  max-width: 120px;
+  height: 42px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 5%;
+  line-height: auto;
+  text-align: left;
+}
+
+.courses-link {
+  display: none;
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  margin-bottom: 0px;
+}
+
+.courses-mobile-link{
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  width: 46px;
+  height: 46px;
+  border-radius: 46px;
+}
+
+.courses-button {
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+/*subscription style*/
+.subscription {
+  max-width: 1279px;
+  /*height: 705px;*/
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #ee5930;
+  border: none;
+  border-radius: 20px;
+  padding-bottom: 40px;
+}
+
+/*.choice {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #ee5930;
+  margin-bottom: 0px;
+  padding-bottom: 30px;
+  border: none;
+  border-radius: 20px;
+} */
+
+.subscription-card {
+  width: 300px;
+  height: 195px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 4px;
+}
+
+.subscription-content {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.subscription-imprisonment {
+  text-align: start;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: auto;
+  letter-spacing: 0%;
+  margin-bottom: 15px;
+  color: #231f20;
+}
+
+.subscription-info {
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 5%;
+  line-height: auto;
+  text-align: left;
+}
+
+.subscription-price {
+  text-align: left;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: auto;
+  letter-spacing: 0%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: #ee5930;
+}
+
+.subscription-price:after {
+  content: "\20BD";
+  font-size: 22px;
+  font-weight: 100;
+}
+
+.subscription-text {
+  font-size: 16px;
+  letter-spacing: 130%;
+  line-height: auto;
+  text-align: left;
+}
+
+.subscription-svg {
+  display: none;
+}
+
+.subscription-svg-mobile {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+/*laboratory style*/
+.laboratory {
+  max-width: 1279px;
+  height: 686px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: #f1f5f9;
+  border: none;
+  border-radius: 20px;
+}
+
+.laboratory-wrapper {
+  position: relative;
+  width: 600px;
+  height: 606px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.lab-mobile-title{
+  margin: 0 auto;
+  width: 301px;
+  color: #231f20;
+  font-size: 22px;
+  line-height: auto;
+  letter-spacing: 0%;
+  margin-bottom: 30px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.laboratory-subtitle {
+  width: 480px;
+  /*height: 46px;*/
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  font-size: 16px;
+  letter-spacing: 130%;
+  line-height: auto;
+  text-align: center;
+}
+
+.video-wrapper {
+  position: absolute;
+  /*margin-left: auto;*/
+  bottom: 0px;
+  width: 600px;
+  height: 400px;
+  border: none;
+  border-radius: 20px;
+  background-color: bisque;
+}
+
+/*full professors style*/
+.professor {
+  max-width: 1279px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.professor-card {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 600px;
+  height: 346px;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 4px;
+  background-color: #f1f5f9;
+  border: none;
+  border-radius: 20px;
+}
+
+.desktop-professor{
+  display: none;
+}
+
+.professor-info-640{
+  width: 280px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*.hide-professor-card{
+  display: none;
+}*/
+
+.professor-title-mobile{
+  color: #231f20;
+  margin-top: 60px;
+}
+
+.professor-avatar {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-left: 30px;
+  margin-top: 40px;
+  border: none;
+  border-radius: 100px;
+  background-color: beige;
+}
+
+.professor-name{
+  text-align: left;
+  margin-left: 0px;
+  margin-bottom: 10px;
+}
+
+/*.choice-subtitle {
+  max-width: 230px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 5%;
+  line-height: auto;
+  text-align: left;
+}*/
+
+
+.professor-text {
+  width: 280px;
+  font-size: 16px;
+  letter-spacing: 130%;
+  line-height: auto;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.professor-text-mobile{
+  text-align: left;
+  color: #ee5930;
+  margin-bottom: 20px;
+}
+
+.svg-professor-open {
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+  width: 46px;
+  height: 46px;
+  /*border: 5px solid;
+  border-color: #ee5930;*/
+  border-radius: 46px;
+}
+
+/*final style*/
+.final {
+  max-width: 1279px;
+  height: 478px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.final-wrapper {
+  width: 640px;
+  height: 378px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background-color: #f1f5f9;
+  border: none;
+  border-radius: 20px;
+}
+
+.final-card {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-left: 20px;
+  width: 301px;
+  height: 240px;
+  /*height: 220px;*/
+  /*margin-left: 80px;
+  margin-top: 160px;*/
+}
+
+.final-title{
+  color: #231f20;
+  text-align: left;
+}
+
+.final-text{
+  width: 271px;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.form-button-640 {
+  font-family: "Jura";
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  line-height: 130%;
+  letter-spacing: 5%;
+  width: 300px;
+  height: 43px;
+  background-color: #ee5930;
+  /*padding: 20px;*/
+  border: 0;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 10px;
+}
+
+.png-final {
+  display: none;
+  margin-top: 46px;
+  margin-right: 97px;
+  height: 506px;
+  width: 506px;
+}
+
+.png-final-mobile {
+  margin-top: 42px;
+  /*margin-right: 97px;*/
+  height: 287px;
+  width: 300px;
+}
+
+/*.final-wrapper {
+  width: 1280px;
+  height: 578px;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.wrapper-without-png {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}*/
