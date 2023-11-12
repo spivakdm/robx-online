@@ -5,7 +5,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta http-equiv="Content-Style-Type" content="text/css" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Project404</title>
+      <title>Robx-online</title>
       <style type="text/css"></style>
       <link rel="stylesheet" href="./css/reset.css" />
       <!--<link rel="stylesheet" href="./css/style.css">-->
@@ -13,12 +13,12 @@
       <!--<link rel="stylesheet" href="./css/style-mobile.css" />-->
       <link
         rel="stylesheet"
-        media="screen and (min-width: 1280px)"
+        media="screen and (min-width: 1282px)"
         href="./css/style.css"
       />
       <link
         rel="stylesheet"
-        media="screen and (min-width: 640px) and (max-width: 1279px)"
+        media="screen and (min-width: 640px) and (max-width: 1281px)"
         href="./css/style-640.css"
       />
       <link
@@ -30,6 +30,14 @@
 
     <body>
       <main>
+        <div class="logo-desktop">
+          <img
+            src="img/svg/logo-desktop.svg"
+            alt="logo"
+            width="152"
+            height="46"
+          />
+        </div>
         <!--SECTION INTRO-->
         <section class="card">
           <div class="wrapper-without-png">
@@ -44,72 +52,157 @@
               </div>
               <!--png-640-->
               <div class="png-main-640">
-                <img src="img/svg/Frame-640.jpg" alt="png-main-640" />
+                <img
+                  src="img/svg/Frame-640.jpg"
+                  alt="png-main-640"
+                  width="299"
+                  height="138"
+                />
               </div>
             </div>
 
             <!--png-mobile-->
             <div class="png-mobile">
-              <img src="img/svg/Frame-mobile.png" alt="png-main" />
+              <img
+                src="img/svg/Frame-mobile.png"
+                alt="png-main"
+                width="300"
+                height="162"
+              />
             </div>
 
-            <form
-              name="form1"
-              action="<?php the_permalink();?>"
-              class="form-main"
-            >
-              <fieldset class="form-main-wrap">
-                <legend class="form-legend">
-                  Запишитесь на бесплатный !!!!!!! урок и начните свое обучение
-                </legend>
-                <!--<p class="form-main-data">-->
-                <input
-                  id="name"
-                  name="u_name"
-                  type="text"
-                  placeholder="Ваше имя"
-                  required
-                  class="form-main-field"
-                />
-                <input
-                  name="phone"
-                  type="tel"
-                  placeholder="Телефон"
-                  required
-                  class="form-main-field"
-                />
+            <div class="form-show" id="form-wrapper">
+              <form id="myForm" name="myForm" class="form-main">
+                <fieldset class="form-main-wrap">
+                  <legend class="form-legend">
+                    Запишитесь на бесплатный !!!!!!! урок и начните свое
+                    обучение
+                  </legend>
+                  <!--<p class="form-main-data">-->
 
-                <select
-                  name="connect"
-                  id="connect-select"
-                  class="form-main-field"
-                >
-                  <option value="ring">Звонок</option>
-                  <option value="whatsapp">WhattsApp</option>
-                </select>
+                  <input
+                    id="name"
+                    name="legal_name"
+                    type="text"
+                    placeholder="Ваше имя"
+                    required
+                    class="form-main-field"
+                    aria-label="Как к Вам обращаться?"
+                    autocomplete="name"
+                  />
 
-                <button
-                  type="submit"
-                  form="form1"
-                  value="Submit"
-                  class="form-button"
+                  <input
+                    name="phone"
+                    type="tel"
+                    placeholder="Телефон"
+                    required
+                    class="form-main-field"
+                    aria-label="Ваш номер телефона?"
+                    autocomplete="tel"
+                  />
+
+                  <select
+                    name="connect"
+                    id="connect-select"
+                    class="form-main-field"
+                    aria-label="Вам позвонить или написать в WhattsApp"
+                  >
+                    <option value="ring">Звонок</option>
+                    <option value="whatsapp">WhattsApp</option>
+                  </select>
+
+                  <input type="hidden" name="utm_source" id="utm_source" />
+                  <input type="hidden" name="utm_medium" id="utm_medium" />
+                  <input type="hidden" name="utm_campaign" id="utm_campaign" />
+
+                  <button
+                    type="submit"
+                    value="Submit"
+                    class="form-button"
+                    onclick="postData()"
+                  >
+                    ЗАПИСАТЬСЯ
+                  </button>
+                  <!--</p>-->
+                  <legend class="form-legend-post">
+                    Нажимая эту кнопку Вы соглашаетесь с
+                    <a
+                      href="https://docs.google.com/document/d/1bn1Z13IpLW2m6mcKqdP87zYbrI0d3tKsbvRKvWDuFUw/edit#heading=h.4ocwq6wk4rnf"
+                      style="color: #ee5930; text-decoration: none"
+                      >политикой конфиденциальности</a
+                    >
+                  </legend>
+                </fieldset>
+              </form>
+              <p class="form-legend-post-640">
+                Нажимая эту кнопку вы соглашаетесь с
+                <a
+                  href="https://docs.google.com/document/d/1bn1Z13IpLW2m6mcKqdP87zYbrI0d3tKsbvRKvWDuFUw/edit#heading=h.4ocwq6wk4rnf"
+                  style="color: #ee5930; text-decoration: none"
+                  >политикой конфиденциальности</a
                 >
-                  ЗАПИСАТЬСЯ
-                </button>
-                <!--</p>-->
-                <legend class="form-legend-post">
-                  Нажимая эту кнопку вы соглашаетесь с политикой
-                  конфиденциальности
-                </legend>
-              </fieldset>
-            </form>
-            <p class="form-legend-post-640">
-              Нажимая эту кнопку вы соглашаетесь с политикой конфиденциальности
-            </p>
+              </p>
+            </div>
+            <div class="form-success" id="form-success">
+              <p class="success-1">ВАША ЗАЯВКА УСПЕШНО ОТПРАВЛЕНА</p>
+              <p class="success-2">Мы свяжемся с Вами в ближайшее время!</p>
+            </div>
           </div>
           <div class="png-main">
-            <img src="img/svg/Frame.png" alt="png-main" />
+            <img
+              src="img/svg/Frame.png"
+              alt="png-main"
+              width="546"
+              height="556"
+            />
           </div>
+          <!--fill utm parameters in form-->
+          <script>
+            const getParam = (param) => {
+              const urlParams = new URL(window.location.toString())
+                .searchParams;
+              return urlParams.get(param) || "";
+            };
+
+            //const utm = getParam("utm_source");
+            let form = document.forms.myForm;
+            let elemUtmSource = form.elements.utm_source;
+            let elemUtmMedium = form.elements.utm_medium;
+            let elemUtmCampaign = form.elements.utm_campaign;
+            elemUtmSource.value = getParam("utm_source");
+            elemUtmMedium.value = getParam("utm_medium");
+            elemUtmCampaign.value = getParam("utm_campaign");
+          </script>
+          <!--Post request-->
+          <script>
+            function postData() {
+              const formData = new FormData(document.getElementById("myForm"));
+              const formWrap = document.getElementById("form-wrapper");
+              const formSuccess = document.getElementById("form-success");
+
+              event.preventDefault();
+              fetch(
+                "https://webhook.site/ad53b8fd-a9e0-4842-a370-b445ad258f4d",
+                {
+                  method: "POST",
+                  mode: "cors", // Enable CORS
+                  headers: {
+                    "Content-Type": "application/json", // Adjust the content type based on your API requirements
+                  },
+                  body: JSON.stringify(Object.fromEntries(formData)),
+                }
+              )
+                .then((response) => response.json())
+                .then((data) => {
+                  console.log("Success:", data);
+                })
+                .catch((error) => {
+                  console.error("Error:", error);
+                });
+              formWrap.style.display = "none";
+              formSuccess.style.display = "block";
+            }
+          </script>
         </section>
 
         <!--SECTION CHOICE-->
@@ -125,6 +218,8 @@
                     class="png-icon"
                     src="img/svg/Choice/icon-1.png"
                     alt="choice-1"
+                    width="384"
+                    height="200"
                   />
                 </div>
                 <!--MobileImg-->
@@ -133,6 +228,8 @@
                     class="png-icon"
                     src="img/svg/Choice/Choice-mobile/icon-2-1.png"
                     alt="choice-mobile-1"
+                    width="260"
+                    height="100"
                   />
                 </div>
                 <h3 class="choice-subtitle">
@@ -161,6 +258,8 @@
                     class="png-icon"
                     src="img/svg/Choice/icon-2.png"
                     alt="choice-2"
+                    width="384"
+                    height="200"
                   />
                 </div>
                 <!--MobileImg-->
@@ -169,6 +268,8 @@
                     class="png-icon"
                     src="img/svg/Choice/Choice-mobile/icon-2-2.png"
                     alt="choice-mobile-1"
+                    width="260"
+                    height="100"
                   />
                 </div>
                 <h3 class="choice-subtitle">9 АВТОРСКИХ ПРОГРАММ</h3>
@@ -195,6 +296,8 @@
                     class="png-icon"
                     src="img/svg/Choice/icon-3.png"
                     alt="choice-3"
+                    width="384"
+                    height="200"
                   />
                 </div>
                 <!--MobileImg-->
@@ -203,6 +306,8 @@
                     class="png-icon"
                     src="img/svg/Choice/Choice-mobile/icon-2-3.png"
                     alt="choice-mobile-1"
+                    width="260"
+                    height="100"
                   />
                 </div>
                 <h3 class="choice-subtitle">ОДИН ПРЕПОДАВАТЕЛЬ</h3>
@@ -227,6 +332,8 @@
                     class="png-icon"
                     src="img/svg/Choice/icon-4.png"
                     alt="choice-4"
+                    width="384"
+                    height="200"
                   />
                 </div>
                 <!--MobileImg-->
@@ -235,6 +342,8 @@
                     class="png-icon"
                     src="img/svg/Choice/Choice-mobile/icon-2-4.png"
                     alt="choice-mobile-1"
+                    width="260"
+                    height="100"
                   />
                 </div>
                 <h3 class="choice-subtitle">ТОЛЬКО ИНДИВИДУАЛЬНЫЕ ЗАНЯТИЯ</h3>
@@ -260,6 +369,8 @@
                     class="png-icon"
                     src="img/svg/Choice/icon-5.png"
                     alt="choice-5"
+                    width="384"
+                    height="200"
                   />
                 </div>
                 <!--MobileImg-->
@@ -268,6 +379,8 @@
                     class="png-icon"
                     src="img/svg/Choice/Choice-mobile/icon-2-5.png"
                     alt="choice-mobile-1"
+                    width="260"
+                    height="100"
                   />
                 </div>
                 <h3 class="choice-subtitle">ОБРАЗОВАТЕЛЬНАЯ ЛИЦЕНЗИЯ</h3>
@@ -291,6 +404,8 @@
                     class="png-icon"
                     src="img/svg/Choice/icon-6.png"
                     alt="choice-6"
+                    width="384"
+                    height="200"
                   />
                 </div>
                 <!--MobileImg-->
@@ -299,6 +414,8 @@
                     class="png-icon"
                     src="img/svg/Choice/Choice-mobile/icon-2-6.png"
                     alt="choice-mobile-1"
+                    width="260"
+                    height="100"
                   />
                 </div>
                 <h3 class="choice-subtitle">ЛОЯЛЬНОСТЬ</h3>
@@ -360,7 +477,7 @@
                     });
                   }
                 } else if (window.matchMedia("(min-width: 640px)").matches) {
-                  if (window.matchMedia("(max-width: 1279px)").matches) {
+                  if (window.matchMedia("(max-width: 1281px)").matches) {
                     for (let i = 0; i < 3; i++) {
                       wrapperList[i].addEventListener("click", function () {
                         if (hideSectionList[2 * i].style.display === "block") {
@@ -380,7 +497,7 @@
                         }
                       });
                     }
-                  } 
+                  }
                 }
               });
             </script>
@@ -401,6 +518,8 @@
                     class="png-icon"
                     src="img/svg/Courses/python.png"
                     alt="python"
+                    width="384"
+                    height="200"
                   />
                 </div>
                 <div class="png-choice-mobile-200">
@@ -408,6 +527,8 @@
                     class="png-icon"
                     src="img/svg/Courses/Courses-mobile/python-mobile.png"
                     alt="python"
+                    width="260"
+                    height="200"
                   />
                 </div>
                 <h3 class="choice-subtitle" style="margin-bottom: 14px">
@@ -456,6 +577,8 @@
                     class="png-icon"
                     src="img/svg/Courses/minecraft.png"
                     alt="minecraft"
+                    width="384"
+                    height="200"
                   />
                 </div>
                 <div class="png-choice-mobile-200">
@@ -463,6 +586,8 @@
                     class="png-icon"
                     src="img/svg/Courses/Courses-mobile/minecraft-mobile.png"
                     alt="minecraft"
+                    width="260"
+                    height="200"
                   />
                 </div>
                 <h3 class="choice-subtitle" style="margin-bottom: 14px">
@@ -509,6 +634,8 @@
                     class="png-icon"
                     src="img/svg/Courses/scratch.png"
                     alt="scratch"
+                    width="384"
+                    height="200"
                   />
                 </div>
                 <div class="png-choice-mobile-200">
@@ -516,6 +643,8 @@
                     class="png-icon"
                     src="img/svg/Courses/Courses-mobile/scratch-mobile.png"
                     alt="scratch"
+                    width="260"
+                    height="200"
                   />
                 </div>
                 <h3 class="choice-subtitle" style="margin-bottom: 14px">
@@ -562,6 +691,8 @@
                     class="png-icon"
                     src="img/svg/Courses/MeowBit.png"
                     alt="MeowBit"
+                    width="384"
+                    height="200"
                   />
                 </div>
                 <div class="png-choice-mobile-200">
@@ -569,6 +700,8 @@
                     class="png-icon"
                     src="img/svg/Courses/Courses-mobile/MeowBit-mobile.png"
                     alt="MeowBit"
+                    width="260"
+                    height="200"
                   />
                 </div>
                 <h3 class="choice-subtitle" style="margin-bottom: 14px">
@@ -615,6 +748,8 @@
                     class="png-icon"
                     src="img/svg/Courses/Duck.png"
                     alt="Micro:Bit"
+                    width="384"
+                    height="200"
                   />
                 </div>
                 <div class="png-choice-mobile-200">
@@ -622,6 +757,8 @@
                     class="png-icon"
                     src="img/svg/Courses/Courses-mobile/Duck-mobile.png"
                     alt="Micro:Bit"
+                    width="260"
+                    height="200"
                   />
                 </div>
                 <h3 class="choice-subtitle" style="margin-bottom: 14px">
@@ -667,6 +804,8 @@
                     class="png-icon"
                     src="img/svg/Courses/arduboy.png"
                     alt="arduboy"
+                    width="384"
+                    height="200"
                   />
                 </div>
                 <div class="png-choice-mobile-200">
@@ -674,6 +813,8 @@
                     class="png-icon"
                     src="img/svg/Courses/Courses-mobile/arduboy-mobile.png"
                     alt="arduboy"
+                    width="260"
+                    height="200"
                   />
                 </div>
                 <h3 class="choice-subtitle" style="margin-bottom: 14px">
@@ -728,6 +869,8 @@
                     class="png-icon"
                     src="img/svg/Courses/Cpp.png"
                     alt="C++"
+                    width="384"
+                    height="200"
                   />
                 </div>
                 <div class="png-choice-mobile-200">
@@ -735,6 +878,8 @@
                     class="png-icon"
                     src="img/svg/Courses/Courses-mobile/Cpp-mobile.png"
                     alt="C++"
+                    width="260"
+                    height="200"
                   />
                 </div>
                 <h3 class="choice-subtitle" style="margin-bottom: 14px">
@@ -781,6 +926,8 @@
                     class="png-icon"
                     src="img/svg/Courses/3Dprint.png"
                     alt="3Dprint"
+                    width="384"
+                    height="200"
                   />
                 </div>
                 <div class="png-choice-mobile-200">
@@ -788,6 +935,8 @@
                     class="png-icon"
                     src="img/svg/Courses/Courses-mobile/3Dprint-mobile.png"
                     alt="3Dprint"
+                    width="260"
+                    height="200"
                   />
                 </div>
                 <h3 class="choice-subtitle" style="margin-bottom: 14px">
@@ -1039,10 +1188,10 @@
                   </p>
                   <div class="hide-professor-card">
                     <p class="professor-text">
-                      Сфера научных интересов: сигналы и синтез
-                      звука, применение плат Arduino для создания звуковых
-                      синтезаторов и контроллеров. Помимо основной программы,
-                      ведет в Робикс элективный курс по 3D-моделированию.
+                      Сфера научных интересов: сигналы и синтез звука,
+                      применение плат Arduino для создания звуковых синтезаторов
+                      и контроллеров. Помимо основной программы, ведет в Робикс
+                      элективный курс по 3D-моделированию.
                     </p>
                   </div>
                 </div>
@@ -1183,10 +1332,20 @@
               </script>  -->
             </div>
             <div class="png-final">
-              <img src="img/svg/Final.png" alt="png-final" />
+              <img
+                src="img/svg/Final.png"
+                alt="png-final"
+                width="506"
+                height="506"
+              />
             </div>
             <div class="png-final-mobile">
-              <img src="img/svg/Final-mobile.png" alt="png-final" />
+              <img
+                src="img/svg/Final-mobile.png"
+                alt="png-final"
+                width="300"
+                height="287"
+              />
             </div>
           </div>
         </section>
