@@ -101,6 +101,10 @@ body {
   margin-bottom: 30px;
 }
 
+.logo-desktop{
+  display: none;
+}
+
 .wrapper-640{
   width: 601px;
   margin: 0 auto;
@@ -129,6 +133,33 @@ body {
   flex-direction: column;
   justify-content: left;
 }
+
+.form-show{
+  display: block;
+}
+
+.form-success{
+  display: none;
+  width: 600px;
+  margin: auto;
+}
+
+.success-1{
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: auto;
+  letter-spacing: 5%;
+  color: #ee5930;
+}
+
+.success-2{
+  text-align: left;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+
 
 .card-title {
   max-width: 300px;
@@ -260,6 +291,15 @@ body {
   border-radius: 10px;
 }
 
+.form-button {
+  transition-duration: 0.2s;
+}
+
+.form-button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: white;
+}
+
 /*choice style */
 .choice {
   max-width: 1279px;
@@ -300,7 +340,7 @@ body {
 }
 
 .choice-wrapper {
-  width: 604px;
+  width: 608px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -316,6 +356,7 @@ body {
   width: 300px;
   /*max-height: 351px;*/
   margin-bottom: 4px;
+  margin-right: 4px;
   background-color: white;
   border: none;
   border-radius: 20px;
@@ -436,6 +477,7 @@ body {
   width: 300px;
   /*height: 350px;*/
   margin-bottom: 4px;
+  margin-right: 4px;
   background-color: #f1f5f9;
   border: none;
   border-radius: 20px;
@@ -540,7 +582,7 @@ body {
 } */
 
 .subscription-card {
-  width: 300px;
+  width: 302px;
   height: 195px;
   background-color: white;
   border: none;
