@@ -52,6 +52,7 @@ html {
 }
 
 body {
+  zoom: 90%;
   font-family: "Jura";
   font-style: normal;
   font-size: 18px;

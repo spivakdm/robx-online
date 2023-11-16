@@ -10,16 +10,22 @@
       <style type="text/css"></style>
       <link rel="stylesheet" href="./css/reset.css" />
       <!--<link rel="stylesheet" href="./css/style.css">-->
+      <!--<link rel="stylesheet" href="./css/style-scale.css">-->
       <!--<link rel="stylesheet" href="./css/style-640.css">-->
       <!--<link rel="stylesheet" href="./css/style-mobile.css" />-->
       <link
         rel="stylesheet"
-        media="screen and (min-width: 1282px)"
+        media="screen and (min-width: 1301px)"
         href="./css/style.css"
       />
       <link
         rel="stylesheet"
-        media="screen and (min-width: 640px) and (max-width: 1281px)"
+        media="screen and (min-width: 1152px) and (max-width: 1300px)"
+        href="./css/style-scale.css"
+      />
+      <link
+        rel="stylesheet"
+        media="screen and (min-width: 640px) and (max-width: 1151px)"
         href="./css/style-640.css"
       />
       <link
@@ -184,32 +190,28 @@
               const formSuccess = document.getElementById("form-success");
 
               if (x == "") {
-                alert("Имя должно быть заполнено");
                 return false;
               } else if (y == "") {
-                alert("Номер телефона должен быть заполнен");
                 return false;
               } else {
                 event.preventDefault();
                 fetch("https://robx.org/online-handler/", {
-                //fetch(
+                  //fetch(
                   //"https://webhook.site/ad53b8fd-a9e0-4842-a370-b445ad258f4d",
                   //{
-                    method: "POST",
-                    mode: "cors", // Enable CORS
-                    headers: {
-                      "Content-Type": "application/json", // Adjust the content type based on your API requirements
-                    },
-                    body: JSON.stringify(Object.fromEntries(formData)),
-                  }
-                )
-                  //.then((response) => response.json())
+                  method: "POST",
+                  mode: "cors", // Enable CORS
+                  headers: {
+                    "Content-Type": "application/json", // Adjust the content type based on your API requirements
+                  },
+                  body: JSON.stringify(Object.fromEntries(formData)),
+                })
                   .then((response) => {
                     if (response.ok) {
                       formWrap.style.display = "none";
                       formSuccess.style.display = "block";
                     }
-                    return response.json();
+                    return response.text();
                   })
                   .then((data) => {
                     console.log("Success:", data);
@@ -217,8 +219,6 @@
                   .catch((error) => {
                     console.error("Error:", error);
                   });
-                //formWrap.style.display = "none";
-                //formSuccess.style.display = "block";
               }
             }
           </script>
@@ -450,28 +450,6 @@
                 />
               </div>
             </div>
-            <!--
-            <script>
-              document.addEventListener("DOMContentLoaded", function () {
-                const addButtonList = document.querySelectorAll(".png-open");
-                const hideSectionList =
-                  document.querySelectorAll(".hide-choice-card");
-
-                for (let i = 0; i < 6; i++) {
-                  addButtonList[i].addEventListener("click", function () {
-                    if (hideSectionList[i].style.display === "none") {
-                      hideSectionList[i].style.display = "block";
-                      addButtonList[i].style.backgroundImage =
-                        "url(img/svg/Choice/Choice-mobile/svg-close.svg)";
-                    } else {
-                      hideSectionList[i].style.display = "none";
-                      addButtonList[i].style.backgroundImage =
-                        "url(img/svg/Choice/Choice-mobile/svg-open.svg)";
-                    }
-                  });
-                }
-              });
-            </script> -->
 
             <script>
               document.addEventListener("DOMContentLoaded", function () {
@@ -508,9 +486,9 @@
                             "img/svg/Choice/Choice-mobile/svg-open.svg";
                         } else {
                           hideSectionList[2 * i].style.display = "block";
+                          hideSectionList[2 * i + 1].style.display = "block";
                           imgList[2 * i].src =
                             "img/svg/Choice/Choice-mobile/svg-close.svg";
-                          hideSectionList[2 * i + 1].style.display = "block";
                           imgList[2 * i + 1].src =
                             "img/svg/Choice/Choice-mobile/svg-close.svg";
                         }
@@ -760,11 +738,7 @@
                   />
                 </a>
               </div>
-            </div>
-            <div
-              class="hide-section choice-wrapper"
-              style="display: none; justify-content: start"
-            >
+
               <!--5th card-->
               <div class="courses-card" style="position: relative">
                 <div class="png-choice">
@@ -878,7 +852,11 @@
                   />
                 </a>
               </div>
-
+            </div>
+            <div
+              class="hide-section choice-wrapper"
+              style="display: none; justify-content: start"
+            >
               <!--7th-->
               <div
                 class="courses-card"
@@ -1340,16 +1318,6 @@
                   });
                 });
               </script>
-
-              <!--<script>
-                function topFunction() {
-                  document
-                    .getElementById("subscribe")
-                    .addEventListener("click", () => {
-                      document.getElementById("name").focus();
-                    });
-                }
-              </script>  -->
             </div>
             <div class="png-final">
               <img
